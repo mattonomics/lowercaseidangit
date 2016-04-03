@@ -9,9 +9,7 @@ Author URI: http://mattonomics.com
 */
 
 function lowercase_i_dangit( $text ) {
-	$current_filter = current_filter();
-	if ( 'the_title' === $current_filter || 'wp_title' === $current_filter )
-		return str_replace( 'Internet', 'internet', $text );
+	return str_replace( 'Internet', 'internet', $text );
 }
 
 add_filter( 'the_title', 'lowercase_i_dangit', 11 );
